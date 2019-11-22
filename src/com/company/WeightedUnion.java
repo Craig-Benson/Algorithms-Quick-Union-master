@@ -5,17 +5,18 @@ public class WeightedUnion {
     private int[] intArray;
     Union union = new Union();
 
-    public WeightedUnion(){
-        
+    WeightedUnion(){
+
     this.intArray = union.getArray();
 
     }
 
-    public int weightedUnion(int a, int b){
+    int weightedUnion(int a, int b){
 
 
         int rootA = union.root(a);
         int countA = union.getCount();
+
         int rootB = union.root(b);
         int countB = union.getCount();
 

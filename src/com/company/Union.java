@@ -6,10 +6,10 @@ public class Union {
     private int count;
 
 
-    public int[] getArray(){
+    int[] getArray(){
         return intArray;
     }
-    public int getCount(){
+    int getCount(){
 
         return this.count;
 
@@ -27,20 +27,19 @@ public class Union {
 
         }
 
-        public int root(int p) {
+         int root(int p) {
         this.count = 1;
-        int y = this.intArray[p-1];
-        int z = this.intArray[y];
+        int a = this.intArray[p-1];
+        int b = this.intArray[a];
 
+        while(a!=b) {
 
-        while(y!=z) {
+            a=this.intArray[b];
+            b=this.intArray[a];
 
-            System.out.println(y+" "+z);
-            y= this.intArray[z];
-            z=this.intArray[y];
             this.count++;
     }
-           return y;
+           return a;
         }
 
 
