@@ -1,37 +1,49 @@
 package com.company;
 
-import java.util.Arrays;
-
 public class Union {
 
-        private int[] intArrayA = {0, 9, 6, 4, 4, 2, 6, 1, 0, 5};
+    private int[] intArray = {0, 9, 6, 4, 4, 2, 6, 1, 0, 5};
+    private int count;
 
+
+    public int[] getArray(){
+        return intArray;
+    }
+    public int getCount(){
+
+        return this.count;
+
+    }
 
     public boolean connected(int p, int q) {
-        return intArrayA[p - 1] == intArrayA[q - 1];
+
+        return this.intArray[p - 1] == this.intArray[q - 1];
+
     }
 
     public void union(int p,int q) {
 
-        intArrayA[p-1] = q;
+        this.intArray[p-1] = q;
 
         }
 
+        public int root(int p) {
+        this.count = 1;
+        int y = this.intArray[p-1];
+        int z = this.intArray[y];
 
-    public void root(int p) {
-
-        int y = intArrayA[p-1];
-        int z = intArrayA[y];
 
         while(y!=z) {
 
             System.out.println(y+" "+z);
-            y= intArrayA[z];
-            z=intArrayA[y];
+            y= this.intArray[z];
+            z=this.intArray[y];
+            this.count++;
+    }
+           return y;
+        }
 
-    }
-        System.out.println(y);
-    }
+
     }
 
 
