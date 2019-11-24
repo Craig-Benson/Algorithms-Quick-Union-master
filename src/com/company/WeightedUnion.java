@@ -1,6 +1,6 @@
 package com.company;
 
-public class WeightedUnion {
+class WeightedUnion {
 
     private int[] intArray;
     Union union = new Union();
@@ -19,6 +19,7 @@ public class WeightedUnion {
 
         int rootB = union.root(b);
         int countB = union.getCount();
+
 
         if(countA<countB) {
             return intArray[rootA] = intArray[rootB];

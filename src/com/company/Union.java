@@ -2,7 +2,8 @@ package com.company;
 
 public class Union {
 
-    private int[] intArray = {0, 9, 6, 4, 4, 2, 6, 1, 0, 5};
+//    private int[] intArray = {0, 9, 6, 4, 4, 2, 6, 1, 0, 5};
+private int[] intArray = {0, 1, 2, 3, 4, 5, 6, 7, 8, 9};
     private int count;
 
 
@@ -28,17 +29,22 @@ public class Union {
         }
 
          int root(int p) {
-        this.count = 1;
+        this.count = 0;
         int a = this.intArray[p-1];
         int b = this.intArray[a];
 
         while(a!=b) {
-
+            this.count++;
             a=this.intArray[b];
             b=this.intArray[a];
 
             this.count++;
     }
+        for(int i: intArray){
+            if(intArray[i]==a){
+                this.count++;
+            }
+        }
            return a;
         }
 
